@@ -1,8 +1,8 @@
 name: Build and Push Home Assistant Image and update config version
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+#  schedule:
+#    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -61,7 +61,7 @@ jobs:
           args: |
             --all \
             --target beszel_agent \
-            --docker-hub ghcr.io/obamium69
+            --docker-hub ghcr.io/larserhardsen
 
       - name: Commit beszel_agent config.yaml version update
         run: |
